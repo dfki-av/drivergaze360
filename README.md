@@ -1,6 +1,7 @@
-# DriverGaze360
+# DriverGaze360: Omnidirectional Driver Attention with Object-Level Guidance
 
-TODO:
-
+TODOs:
+- [ ] Cleanup dataset
+- [ ] Add dataset
 - [ ] Add data processing scripts
-- [ ] Add dataset links
+- [ ] Add training and inference scripts
