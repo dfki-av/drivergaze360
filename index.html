@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="DriverGaze360 - Shreedhar Govil, Didier Stricker, Jason Rambach">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="driver attention, autonomous driving, machine learning, computer vision, AI">
+  <!-- TODO: List all authors -->
+  <meta name="author" content="Shreedhar Govil, Didier Stricker, Jason Rambach">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="German Research Center for Artificial Intelligence">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="DriverGaze360">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://av.dfki.de/drivergaze360/">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
+  <meta property="article:author" content="Shreedhar Govil">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="Driver Attention">
+  <meta property="article:tag" content="Autonomous Driving">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="DriverGaze360">
+  <meta name="citation_author" content="Govil, Shreedhar">
+  <meta name="citation_author" content="Stricker, Didier">
+  <meta name="citation_author" content="Rambach, Jason">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="CVPR">
+  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>DriverGaze360 - Shreedhar Govil, Didier Stricker, Jason Rambach</title>
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="https://av.dfki.de/wp-content/themes/av-dfki/images/favicon.png">
+  <link rel="apple-touch-icon" href="https://av.dfki.de/wp-content/themes/av-dfki/images/favicon.png">
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <div>
+                    <img src="static/images/logo.png" alt="BERTHA logo" width="40%">
+                  </div>
+            <h1 class="title is-1 publication-title">DriverGaze360: Omnidirectional Driver Attention with Object-Level Guidance</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- TODO: Replace with your paper authors and their personal links -->
+              <span class="author-block">
+                <a href="https://av.dfki.de/members/govil/" target="_blank">Shreedhar Govil</a><sup></sup>,</span>
+                <span class="author-block">
+                  <a href="https://av.dfki.de/members/stricker/" target="_blank">Didier Stricker</a><sup></sup>,</span>
+                  <span class="author-block">
+                    <a href="https://av.dfki.de/members/rambach/" target="_blank">Jason Rambach</a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <!-- TODO: Replace with your institution and conference/journal info -->
+                    <span class="author-block">German Research Center for Artificial Intelligence (DFKI)<br></span>
+                    <!-- TODO: Remove this line if no equal contribution -->
+                  </div>
+                  
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- TODO: Update with your arXiv paper ID -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/2512.14266" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- TODO: Add your supplementary material PDF or remove this section -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <span class="link-block">
+                    <a href="https://github.com/dfki-av/drivergaze360" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://av.dfki.de/drivergaze360/dataset/bertha_dataset.tar" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+              <span class="link-block">
+                  <a href="https://huggingface.co/datasets/dfki-av/drivergaze360" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" 
+                        alt="HuggingFace Logo" 
+                        style="height: 1.2em;">
+                  </span>
+                  <span>HuggingFace</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<h3 class="title has-text-centered">
+      Accepted to CVPR'26 🎉
+</h3>
+
+    
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    
+    <div class="hero-body">
+      <!-- TODO: Replace with your teaser video -->
+      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+        <!-- TODO: Add your video file path here -->
+        <source src="static/videos/supplementary_video.mp4" type="video/mp4">
+      </video>
+      <!-- TODO: Replace with your video description -->
+      <h2 class="subtitle has-text-centered">
+        DriverGaze360 is a large-scale 360-degree field of view driver attention dataset, containing approximately 1 million gaze-labeled frames collected from 19 human drivers, 
+        enabling comprehensive omnidirectional modeling of driver gaze behavior.  
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+            Predicting driver attention is a critical problem for developing explainable autonomous driving systems and understanding driver behavior in mixed human-autonomous vehicle traffic scenarios. 
+            Although significant progress has been made through large-scale driver attention datasets and deep learning architectures, existing works are constrained by narrow frontal field-of-view and limited driving diversity. 
+            Consequently, they fail to capture the full spatial context of driving environments, especially during lane changes, turns, and interactions involving peripheral objects such as pedestrians or cyclists. 
+            In this paper, we introduce DriverGaze360, a large-scale 360-degree field of view driver attention dataset, containing approximately 1 million gaze-labeled frames collected from 19 human drivers, 
+            enabling comprehensive omnidirectional modeling of driver gaze behavior. 
+            Moreover, our panoramic attention prediction approach, DriverGaze360-Net, jointly learns attention maps and attended objects by employing an auxiliary semantic segmentation head. 
+            This improves spatial awareness and attention prediction across wide panoramic inputs. 
+            Extensive experiments demonstrate that DriverGaze360-Net achieves state-of-the-art attention prediction performance on multiple metrics on panoramic driving images.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Comparision to Other Datasets</h2>
+        <div class="content has-text-justified">
+          <table border="1" cellspacing="1" cellpadding="5">
+            <thead>
+              <tr>
+                <th>Dataset</th>
+                <th>360° FoV</th>
+                <th># Hours</th>
+                <th>Scenarios</th>
+                <th># Subjects</th>
+                <th>Data Collection</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>DR(eye)VE</td>
+                <td>❌</td>
+                <td>6</td>
+                <td>Regular Driving</td>
+                <td>8</td>
+                <td>Real driving</td>
+              </tr>
+              <tr>
+                <td>LBW</td>
+                <td>❌</td>
+                <td>7</td>
+                <td>Regular Driving</td>
+                <td>28</td>
+                <td>Real driving</td>
+              </tr>
+              <tr>
+                <td>BDD-A</td>
+                <td>❌</td>
+                <td>4</td>
+                <td>Busy Intersections, Emergency Breaking</td>
+                <td>1,228</td>
+                <td>Watching videos</td>
+              </tr>
+              <tr>
+                <td>DADA-2000</td>
+                <td>❌</td>
+                <td>6</td>
+                <td>Driving Accidents</td>
+                <td>20</td>
+                <td>Watching videos</td>
+              </tr>
+              <tr>
+                <td>DriverGaze360 (ours)</td>
+                <td>✅</td>
+                <td>9</td>
+                <td>Regular Driving, Critical Situations</td>
+                <td>19</td>
+                <td>Simulated driving</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/teaser.png" alt="Existing Work vs Our Method" loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Existing Work vs Our Method.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/experiment.png" alt="Dataset Collection Setup" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          Dataset Collection Setup.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/network.png" alt="" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+         Network Architecture.
+       </h2>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/our_result.png" alt="" loading="lazy"/>
+      <h2 class="subtitle has-text-centered">
+        Prediction Results.
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Video carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Another Carousel</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
+            <source src="static/videos/carousel1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
+            <source src="static/videos/carousel2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
+            <source src="static/videos/carousel3.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@article{govil_2025,
+  title={DriverGaze360: OmniDirectional Driver Attention with Object-Level Guidance}, 
+  author={Shreedhar Govil and Didier Stricker and Jason Rambach},
+  year={2025},
+  eprint={2512.14266},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2512.14266},
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Acknowledgements</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+            This work was partially funded by the European Union's Horizon Europe Research and Innovation Programme under Grant Agreement No. 101076360 (BERTHA) and by the German Federal Ministry of Research, Technology and Space under Grant Agreement No. 16IW24009 (COPPER).
+The authors would like to express their sincere appreciation to Prateek Kumar Sharma, for his support with data collection and the implementation of driving scenarios. We also gratefully acknowledge Ruben Abad, Alex Levy, and Prof. Antonio M. López from the Computer Vision Center (CVC) for their methodological guidance and for providing the code used to implement the goal-directed navigation routes applied in collecting part of the dataset presented in this study.
+Finally, we sincerely thank all the participants who contributed to the dataset collection, as well as our colleagues at DFKI for their valuable feedback and support throughout this project.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <img 
+            src="static/images/funding_logo.png"
+            alt="Funded Logo"
+            loading="lazy"
+            width="100%"
+          >
+          <p>
+            The views and opinions expressed in this publication are solely those of the author(s) and do not necessarily reflect those of the European Union or the European Climate, Infrastructure and Environment Executive Agency (CINEA). Neither the European Union nor the granting authority can be held responsible for them.
+          </p>
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Google tag (gtag.js) -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-35Z39SJ0TX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-35Z39SJ0TX');
+</script> -->
+
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
