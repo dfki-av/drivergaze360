@@ -10,10 +10,7 @@
 </p>
 
 
-## TODOs:
-- [ ] Add data processing scripts
-- [ ] Add training scripts
-- [ ] Add inference scripts
+<video src="https://github.com/dfki-av/drivergaze360/blob/gh-pages/static/videos/supplementary_video.mp4?raw=true" controls preload></video>
 
 ## Setup
 
@@ -102,6 +99,11 @@ Inference:
   --video-outpath VIDEO_OUTPATH
                         Save path
 ```
+
+## TODOs:
+- [ ] Add data processing scripts
+- [ ] Add training scripts
+- [ ] Add inference scripts
 
 ## Citation
 
