@@ -209,4 +209,3 @@ wandb/*
 slurm-*.out
 
 *.pt
-*.png
