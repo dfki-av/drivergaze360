@@ -102,7 +102,7 @@ Inference:
 
 ## TODOs:
 - [ ] Add data processing scripts
-- [ ] Add training scripts
+- [X] Add training scripts
 - [ ] Add inference scripts
 
 ## Citation
