@@ -110,7 +110,7 @@ Inference:
 If you find this work useful in your research, please consider citing:
 
 ```bibtex
-@article{govil_2025,
+@article{govil_2025_cvpr,
   title        = {DriverGaze360: OmniDirectional Driver Attention with Object-Level Guidance},
   author       = {Shreedhar Govil and Didier Stricker and Jason Rambach},
   year         = {2025},
@@ -119,3 +119,12 @@ If you find this work useful in your research, please consider citing:
   primaryClass = {cs.CV},
   url          = {https://arxiv.org/abs/2512.14266}
 }
+```
+
+## Acknowledgments
+
+This work was partially funded by the European Union's Horizon Europe Research and Innovation Programme under Grant Agreement No. 101076360 (BERTHA) and by the German Federal Ministry of Research, Technology and Space under Grant Agreement No. 16IW24009 (COPPER). The authors would like to express their sincere appreciation to Prateek Kumar Sharma, for his support with data collection and the implementation of driving scenarios. We also gratefully acknowledge Ruben Abad, Alex Levy, and Prof. Antonio M. López from the Computer Vision Center (CVC) for their methodological guidance and for providing the code used to implement the goal-directed navigation routes applied in collecting part of the dataset presented in this study. Finally, we sincerely thank all the participants who contributed to the dataset collection, as well as our colleagues at DFKI for their valuable feedback and support throughout this project.
+
+![](https://github.com/dfki-av/drivergaze360/blob/gh-pages/static/images/funding_logo.png)
+
+The views and opinions expressed in this publication are solely those of the author(s) and do not necessarily reflect those of the European Union or the European Climate, Infrastructure and Environment Executive Agency (CINEA). Neither the European Union nor the granting authority can be held responsible for them. 
