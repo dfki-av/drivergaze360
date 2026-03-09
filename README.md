@@ -9,8 +9,11 @@
   <img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-blue">
 </p>
 
-
-<video src="https://github.com/dfki-av/drivergaze360/blob/gh-pages/static/videos/supplementary_video.mp4?raw=true" controls preload></video>
+<div align="center">
+     <a href="https://www.youtube.com/watch?v=6TCcNn-FQrc">
+       <img src="https://img.youtube.com/vi/6TCcNn-FQrc/0.jpg" alt="Video">
+     </a>
+</div>
 
 ## Setup
 
