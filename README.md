@@ -40,18 +40,8 @@ torchrun --standalone --nproc-per-node=gpu \
 main.py --model DriverGaze360 \
 ```
 
-### Run Inference
+### Run Inference [TODO]
 
-```
-uv run \
-torchrun --standalone --nproc-per-node=gpu \
-main.py \
---model DriverGaze360 \
---inference \
---video-path VIDEO_PATH \
---video-outpath VIDEO_OUTPATH \
---cktp CKPT
-```
 
 ### Configuration
 
