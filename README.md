@@ -24,10 +24,11 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 uv sync
 ```
 
-### Downloading Dataset 🤗
+### Downloading from HuggingFace 🤗
 
-The dataset is available on HuggingFace 🤗 at: https://huggingface.co/datasets/dfki-av/drivergaze360 
-
+The dataset and checkpoints are available on HuggingFace 🤗 at:
+1. https://huggingface.co/datasets/dfki-av/drivergaze360
+2. https://huggingface.co/dfki-av/drivergaze360
 
 ## Training and Inference 
 
