@@ -27,8 +27,8 @@ uv sync
 ### Downloading from HuggingFace 🤗
 
 The dataset and checkpoints are available on HuggingFace 🤗 at:
-1. https://huggingface.co/datasets/dfki-av/drivergaze360
-2. https://huggingface.co/dfki-av/drivergaze360
+- Dataset: https://huggingface.co/datasets/dfki-av/drivergaze360
+- Checkpoints: https://huggingface.co/dfki-av/drivergaze360-net
 
 ## Training and Inference 
 
