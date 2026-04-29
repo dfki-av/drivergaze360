@@ -9,11 +9,9 @@
   <img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-blue">
 </p>
 
-<div align="center">
-     <a href="https://www.youtube.com/watch?v=6TCcNn-FQrc">
-       <img src="https://img.youtube.com/vi/6TCcNn-FQrc/0.jpg" alt="Video">
-     </a>
-</div>
+
+https://github.com/user-attachments/assets/71f40095-a92f-453c-a4d8-494a8034034f
+
 
 ## Setup
 
