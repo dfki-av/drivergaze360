@@ -38,9 +38,6 @@ torchrun --standalone --nproc-per-node=gpu \
 main.py --model DriverGaze360 \
 ```
 
-### Run Inference [TODO]
-
-
 ### Configuration
 
 ```
@@ -95,21 +92,19 @@ Inference:
 ## TODOs:
 - [ ] Add data processing scripts
 - [X] Add training scripts
-- [ ] Add inference scripts
 
 ## Citation
 
 If you find this work useful in your research, please consider citing:
 
 ```bibtex
-@article{govil_2025_cvpr,
-  title        = {DriverGaze360: OmniDirectional Driver Attention with Object-Level Guidance},
-  author       = {Shreedhar Govil and Didier Stricker and Jason Rambach},
-  year         = {2025},
-  eprint       = {2512.14266},
-  archivePrefix= {arXiv},
-  primaryClass = {cs.CV},
-  url          = {https://arxiv.org/abs/2512.14266}
+@InProceedings{Govil_2026_CVPR,
+    author    = {Govil, Shreedhar and Stricker, Didier and Rambach, Jason},
+    title     = {DriverGaze360: OmniDirectional Driver Attention with Object-Level Guidance},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2026},
+    pages     = {39786-39795}
 }
 ```
 
