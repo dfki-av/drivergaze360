@@ -28,6 +28,43 @@ The dataset and checkpoints are available on HuggingFace 🤗 at:
 - Dataset: https://huggingface.co/datasets/dfki-av/drivergaze360
 - Checkpoints: https://huggingface.co/dfki-av/drivergaze360-net
 
+### Preparing the data
+
+The release ships one folder per recording iteration, with the frames packed into
+videos and a tar archive:
+
+```
+<root>/C011/001/001/
+├── is.tar                # Instance Segmentation
+├── dt.mp4                # Depth maps
+├── rgb.mp4               # RGB output
+├── saliency.mp4          # Saliency maps
+└── sim_gaze_df.csv       # Simulator data on ego car and eye gaze positions
+```
+
+The data loader reads individual frames, so unpack every recording first:
+
+```
+scripts/prepare_dataset.sh <dataset-root> [jobs]
+```
+
+This walks the whole tree and turns each recording into:
+
+```
+<root>/C011/001/001/
+├── rgb/000001.jpg ...
+├── saliency/000001.jpg ...
+├── DT/000001.jpg ...
+├── IS/000001.png ...
+└── sim_gaze_df.csv
+```
+
+Frames are numbered from `000001` to match the `Frame` column of
+`sim_gaze_df.csv`. Recordings whose folders already exist are skipped, so the
+script can be re-run after an interruption. Requires `ffmpeg` and `tar`.
+
+Point `--train-path` / `--val-path` at the unpacked splits when training.
+
 ## Training and Inference 
 
 ### Run training
@@ -90,7 +127,7 @@ Inference:
 ```
 
 ## TODOs:
-- [ ] Add data processing scripts
+- [X] Add data processing scripts
 - [X] Add training scripts
 
 ## Citation
